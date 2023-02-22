@@ -1,11 +1,13 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { StyledHeader } from './styled'
+
 
 const Header = () => {
     return (
         <div className="wrapper">
         <header>
-          <div className="headerLeft">
+          <StyledHeader.HeaderLeft>
             <svg
               width="35"
               height="35"
@@ -25,24 +27,24 @@ const Header = () => {
                 </clipPath>
               </defs>
             </svg>
-            <h3>Жакшы жол</h3>
-          </div>
+            <StyledHeader.HeaderLogo>Жакшы жол</StyledHeader.HeaderLogo>
+          </StyledHeader.HeaderLeft>
           <div className="item-wrap">
-            <ul>
+            <StyledHeader.NavUl>
               <NavLink to="/" >Главная</NavLink>
               <NavLink to="/test">Онлайн-тест</NavLink>
               <NavLink to="/posts">Последние изменения</NavLink>
               <NavLink to="/education">Обучающие видео</NavLink>
-            </ul>
+            </StyledHeader.NavUl>
           </div>
-          <div className="Lang">
-            <div className="Lang-RU">
+          <StyledHeader.HeaderLang>
+            <StyledHeader.LangRU>
               <li>RU</li>
-            </div>
-            <div className="Lang-KG">
+            </StyledHeader.LangRU>
+            <StyledHeader.LangKG>
               <li>KG</li>
-            </div>
-          </div>
+            </StyledHeader.LangKG>
+          </StyledHeader.HeaderLang>
         </header>
        </div>
     );
