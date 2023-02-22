@@ -1,10 +1,15 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { NavLink } from 'react-router-dom';
 import { StyledHeader } from './styled'
 
 
 const Header = () => {
-  
+  const {t , i18n} = useTranslation()
+
+  const changeLanguage = (language) => {
+    i18n.changeLanguage(language)
+  }
 
 
     return (
@@ -34,18 +39,18 @@ const Header = () => {
           </StyledHeader.HeaderLeft>
           <div className="item-wrap">
             <StyledHeader.NavUl>
-              <NavLink to="/">Главная</NavLink>
+              <NavLink to="/">{t("title")}</NavLink>
               <NavLink to="/test">Онлайн-тест</NavLink>
-              <NavLink to="/posts">Последние изменения</NavLink>
-              <NavLink to="/education">Обучающие видео</NavLink>
+              <NavLink to="/posts">{t('posts')}</NavLink>
+              <NavLink to="/education">{t("education")}</NavLink>
             </StyledHeader.NavUl>
           </div>
           <StyledHeader.HeaderLang>
             <StyledHeader.LangRU>
-              <li value="ru">RU</li>
+              <li onClick={() => changeLanguage("RU")}>RU</li>
             </StyledHeader.LangRU>
             <StyledHeader.LangKG>
-              <li value="ky">KG</li>
+              <li onClick={() => changeLanguage("KG")}>KG</li>
             </StyledHeader.LangKG>
           </StyledHeader.HeaderLang>
         </StyledHeader.Header>

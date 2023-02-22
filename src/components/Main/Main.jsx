@@ -1,5 +1,6 @@
 import React from "react";
-import image from "../../image/avtokursy 1.jpg";
+import { useTranslation } from "react-i18next";
+import image from "../../image/MainCar.jpg";
 import metodichka from "../../image/Metodichka.png";
 import Photo from "../../image/photoasd.jpg";
 
@@ -7,12 +8,15 @@ import { StyledMain } from "./styled";
 
 
 
+
 const Main = () => {
+  const { t } = useTranslation()
+
   return (
     <>
       <StyledMain.MainPage>
         <StyledMain.MainH1>
-          <h1>Профессиональный инструктор по вождению</h1>
+          <h1>{t("mainH1")}</h1>
           <button className="btn-1">Пройти тест онлайн</button>
         </StyledMain.MainH1>
         <StyledMain.MainCar>
@@ -22,27 +26,27 @@ const Main = () => {
       <StyledMain.Biography>
         <StyledMain.Static>
           <StyledMain.MainH2>
-            Омурбеков Руслан Жакшылыкович- Инструктор по вождению
+            {t("mainBio")}
           </StyledMain.MainH2>
           <div>
             <StyledMain.MainItemCommet>
-              <StyledMain.Matches></StyledMain.Matches>Водительский стаж <br />{" "}
-              более 25 лет.
+              <StyledMain.Matches></StyledMain.Matches>
+              {t("mainItem.1")}
             </StyledMain.MainItemCommet>
             <StyledMain.MainItemCommet>
-              <StyledMain.Matches></StyledMain.Matches>Индивидуально подготовил
-              к практическому <br /> вождению более 1500 студентов
+              <StyledMain.Matches></StyledMain.Matches>
+              {t("mainItem.2")}
             </StyledMain.MainItemCommet>
             <StyledMain.MainItemCommet>
-              <StyledMain.Matches></StyledMain.Matches>Опыт преподавания и{" "}
-              <br /> инструкторский стаж более 12 лет.
+              <StyledMain.Matches></StyledMain.Matches>
+              {t("mainItem.3")}
             </StyledMain.MainItemCommet>
             <StyledMain.MainItemCommet>
-              <StyledMain.Matches></StyledMain.Matches>За 6 лет преподавания в
-              автошколе <br /> выпустил более 1600 студентов
+              <StyledMain.Matches></StyledMain.Matches>
+              {t("mainItem.4")}
             </StyledMain.MainItemCommet>
 
-            <button className="btn-2">Записаться на вождение</button>
+            <button className="btn-2">{t("mainBtn")}</button>
           </div>
         </StyledMain.Static>
         <div>
@@ -57,15 +61,13 @@ const Main = () => {
           <img src={metodichka} alt="manual" />
         </div>
         <StyledMain.MainManualPosob>
-          <h4>Методическое пособие</h4>
+          <h4>{t("mainManual")}</h4>
           <StyledMain.MainItemCommet>
-            <span></span>Во время преподавания ПДД в автошколе, обнаружил ошибки
-            и не полную информацию в ПДД Кыргызстана от 5.02.2020 года.
-            Отталкиваясь от этих ошибок, составил свою методичку по ПДД
+            <span></span>{t("mainManualItem")}
           </StyledMain.MainItemCommet>
-          <StyledMain.MainH6>Стоимость методички</StyledMain.MainH6>
+          <StyledMain.MainH6>{t("mainManualPrice")}</StyledMain.MainH6>
           <b>250 сом</b>
-          <button className="btn-2">Купить методичку</button>
+          <button className="btn-2">{t("mainManualBtn")}</button>
         </StyledMain.MainManualPosob>
       </StyledMain.MainManual>
     </>
