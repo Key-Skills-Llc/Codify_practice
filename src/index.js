@@ -1,14 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import Quiz from "./components/Quiz";
+import { QuizProvider } from "./contexts/quiz";
+// import Timer from "./timer";
 
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
+ReactDOM.render(
+  <React.StrictMode>
+    <QuizProvider>
+    {/* <Timer/> */}
+      <Quiz />
+    </QuizProvider>
+  </React.StrictMode>,
+  document.getElementById("root")
 );
-
-
