@@ -107,8 +107,8 @@ export const StyledMain = {
     }
 
     p {
-      width: 439px;
-      height: 190px;
+      width: 456px;
+      height: 206px;
       margin: 0;
       font-weight: 500;
       font-size: 22px;
@@ -124,7 +124,7 @@ export const StyledMain = {
 
       span {
         width: 5px;
-        height: 190px;
+        height: 206px;
         margin-right: 10px;
 
         background: #94c52d;

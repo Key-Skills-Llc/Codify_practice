@@ -113,7 +113,9 @@ a {
   border-bottom: 1px solid;
 }
 
-.active-lang {
+
+
+.active-li {
   font-weight: 600;
   cursor: pointer;
   color: #2a9134;

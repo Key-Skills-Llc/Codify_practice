@@ -1,15 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { NavLink } from 'react-router-dom';
 import { StyledHeader } from './styled'
 
 
+
+
 const Header = () => {
+
+
+  const [activeRU, setActiveRu] = useState(true)
+  const [activeKg, setActiveKg] = useState(false)
+
+
+
   const {t , i18n} = useTranslation()
 
   const changeLanguage = (language) => {
     i18n.changeLanguage(language)
+    setActiveRu(!activeRU)
+    setActiveKg(!activeKg)
   }
+
 
 
     return (
@@ -46,11 +58,11 @@ const Header = () => {
             </StyledHeader.NavUl>
           </div>
           <StyledHeader.HeaderLang>
-            <StyledHeader.LangRU>
-              <li onClick={() => changeLanguage("RU")}>RU</li>
+            <StyledHeader.LangRU  className={!activeRU  ? "li" : 'active-li'} onClick={() => changeLanguage("RU")}>
+              <li>RU</li>
             </StyledHeader.LangRU>
-            <StyledHeader.LangKG>
-              <li onClick={() => changeLanguage("KG")}>KG</li>
+            <StyledHeader.LangKG className={!activeKg  ? "li" : 'active-li'} onClick={() => changeLanguage("KG")}>
+              <li >KG</li>
             </StyledHeader.LangKG>
           </StyledHeader.HeaderLang>
         </StyledHeader.Header>
