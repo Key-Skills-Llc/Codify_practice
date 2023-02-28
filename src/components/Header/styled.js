@@ -24,6 +24,7 @@ export const StyledHeader = {
   ItemWrapper: styled.div``,
   NavUl: styled.ul`
     display: flex;
+    width: 738px;
     justify-content: space-between;
     gap: 48px;
     margin-left: 71px;

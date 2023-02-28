@@ -61,6 +61,8 @@ export const StyledMain = {
       rgba(42, 145, 52, 0) 100%
     );
     border-radius: 5px;
+    word-wrap: 270px;
+
   `,
   Matches: styled.span`
     width: 5px;

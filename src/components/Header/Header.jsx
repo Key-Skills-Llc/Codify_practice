@@ -8,11 +8,8 @@ import { StyledHeader } from './styled'
 
 const Header = () => {
 
-
   const [activeRU, setActiveRu] = useState(true)
   const [activeKg, setActiveKg] = useState(false)
-
-
 
   const {t , i18n} = useTranslation()
 
@@ -20,10 +17,9 @@ const Header = () => {
     i18n.changeLanguage(language)
     setActiveRu(!activeRU)
     setActiveKg(!activeKg)
+   
   }
-
-
-
+  
     return (
         <div className="wrapper">
         <StyledHeader.Header>
