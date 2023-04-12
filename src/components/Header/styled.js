@@ -1,6 +1,15 @@
 import styled from "styled-components";
 
 export const StyledHeader = {
+  Header: styled.header`
+    display: flex;
+    align-items: center;
+    height: 50px;
+    max-width: 100%;
+    color: #fff;
+    background: linear-gradient(180deg, #94c52d 0%, #2a9134 100%);
+  `,
+
   HeaderLeft: styled.div`
     display: flex;
     justify-content: center;
@@ -15,6 +24,7 @@ export const StyledHeader = {
   ItemWrapper: styled.div``,
   NavUl: styled.ul`
     display: flex;
+    width: 738px;
     justify-content: space-between;
     gap: 48px;
     margin-left: 71px;
@@ -29,18 +39,31 @@ export const StyledHeader = {
     height: 32px;
     font-weight: 600;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-
-
-    
   `,
   LangRU: styled.div`
     border: 1px solid #2a9134;
     border-radius: 5px 0px 0px 5px;
     padding: 5px 8px 5px 8px;
+
+    :hover {
+      font-weight: 600;
+      cursor: pointer;
+      color: #2a9134;
+      background: #ffffff;
+      transition: all 0.2s ease;
+    }
   `,
   LangKG: styled.div`
     border: 1px solid #2a9134;
     border-radius: 0px 5px 5px 0px;
     padding: 5px 8px 5px 8px;
+
+    :hover {
+      font-weight: 600;
+      cursor: pointer;
+      color: #2a9134;
+      background: #ffffff;
+      transition: all 0.2s ease;
+    }
   `,
 };
